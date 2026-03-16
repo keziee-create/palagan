@@ -1,0 +1,45 @@
+body {
+    background-color: #23221c;
+}
+#top {
+    color: black;
+    font-style: oblique;
+    background-color: #4e4a42;
+    width: 35%;
+}
+#about {
+    color: #868e91;
+}
+#services {
+    color: #868e91;
+}
+#contact {
+    color: #868e91;
+}
+#th1 {
+    background-color: #7b7c75;
+    border-radius: 20px;
+}
+#p{
+    font-family: fantasy;
+    color: #23221c;
+}
+.box {
+    background-color: #4e4a42;
+}
+#tb1
+{
+    background-color: #4e4a42;
+}
+#tb2
+{
+    background-color: #4e4a42;
+    text-align: center;
+}
+.box{
+   background-color: #4e4a42;
+   width: 60%;
+    align-content: center;
+    text-align: center;
+    margin-left: 210px;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="URF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <title>Login Page</title>
+    </head>
+    <body id="body">
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
+            <center>
+                <div class="form">
+                    <br>
+
+                    <h2>Login</h2>
+                    <p>Enter your username to submit</p>
+                    <p id="error-message">Incorrect username or password.</p>
+
+                    <form id="loginform">
+                        <label for="username">Username:</label><br>
+                        <input type="text" id="username" name="username" placeholder="Enter username" /><br><br>
+
+                        <label for="password">Password:</label><br>
+                        <input type="password" id="Password" name="password" placeholder="Enter password" /><br><br>
+
+                        <input type="checkbox" id="remember" name="remember"/>
+                        <label for="remember" id="ir">Remember Me</label><br><br>
+
+                        <button type="button" id="submit" onclick="checklogin()">Submit</button>
+                        <button type="button" id="cancel" onclick="clearform()">Cancel</button>
+
+                        <br><br>
+                    </form>
+                </div>
+            </center>
+        
+        <style>
+         /* Button Colors */
+        #submit{
+            height: 30px;
+            border-radius: 20px;
+            background-color: darkgreen;
+        }
+        #cancel{
+            height: 30px;
+            border-radius: 20px;
+            background-color: darkred;
+            color: white;
+        }
+        /* Form backgorund */
+        .form{
+            background-color: midnightblue;
+            width: 25%;
+            border-radius: 50px;
+        }
+        /* font design */
+        h2{
+            font-size: 50px;
+            color: yellow;
+            
+        }
+        p{
+            color: grey;
+        }
+        label{
+            outline-color: black;
+            color: yellow;
+        }
+        #ir{
+            outline-color: black;
+            color: white;
+        }
+        /* backgound design */
+        #body{
+            background-image: url(ikea.jpg);
+            background-repeat: no-repeat;
+            background-size: 2000px;
+            background-position: center;
+             
+        }
+    </style>
+         <script>
+             // STEP1: 
+             var correctusername = "admin";
+             var correctpassword = "1234";
+             
+             function checklogin(){
+                 var enteredusername = document.getElementById("username").value;
+                 var enteredpassword = document.getElementById("Password").value;
+                 
+                 if (enteredusername === correctusername && enteredpassword === correctpassword){
+                     window.location.href = "Service.html";
+                 } else{
+                             document.getElementById("error-message").style.display = "block";
+                         }
+                     }
+            function clearform(){
+                document.getElementById("username").value = "";
+                document.getElementById("Password").value = "";
+                document.getElementById("error-message").style.display = "none";
+                
+            }
+        </script>
+    </body>
+</html>
